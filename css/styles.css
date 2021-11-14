@@ -7,6 +7,7 @@
 	--black: #222;
 	--main-color: rebeccapurple;
 	--white: #f7f7f7;
+	--background: rgba(76, 0, 130, 0.02);
 }
 html {
 	height: 100%;
@@ -19,6 +20,7 @@ body {
 	height: 100%;
 	padding: 10px;
 	width: 100%;
+	background-color: var(--background);
 }
 .container {
 	width: 50%;
@@ -37,7 +39,8 @@ body {
 	padding: 20px 0;
 }
 .content-container {
-	padding: 20px;
+	/* padding: 20px; */
+	margin: 50px 0;
 }
 .footer {
 	padding: 20px 5px;
@@ -46,7 +49,11 @@ body {
 	justify-content: center;
 	border-top: 1px solid rgba(204, 204, 204, 0.5);
 }
-/* general */
+/* general ----------------------------------------------------------------------*/
+img {
+	width: 100%;
+	height: auto;
+}
 .section-title {
 	color: purple;
 	margin-bottom: 10px;
@@ -68,4 +75,36 @@ body {
 /* login--------------------------------------------------------- */
 .login-container {
 	/* border: 1px solid rgba(204, 204, 204, 0.2); */
+}
+/* recos----------------------------------------- */
+.recos-container {
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 40px;
+}
+.rec-card {
+	height: 250px;
+	overflow: hidden auto;
+	width: 250px;
+	border: 1px solid;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 5px;
+}
+.rec-img-container {
+	position: relative;
+	height: 150px;
+	/* overflow: hidden; */
+}
+.rec-img {
+	height: 100%;
+	position: absolute;
+	object-fit: cover;
+	object-position: 0 50%;
+	border-radius: 5px 5 px 0 0;
+}
+.rec-description {
+	margin: 10px 0;
 }

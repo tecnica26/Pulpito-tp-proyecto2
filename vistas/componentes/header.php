@@ -1,6 +1,6 @@
 <header class="header">
 			<h1>
-                <a href="/">PULPITO</a>    
+                <a href="index.php">PULPITO</a>    
             </h1>
 			<div class="sign-buttons">
 				<a href="./vistas/login.php">Ingresar</a>

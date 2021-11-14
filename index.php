@@ -16,31 +16,72 @@ $conexion = mysqli_connect ('localhost','root','','proyectoteruel')
 		<?php
 		include('./vistas/componentes/header.php')
 		?>
-		
 		<div class="content-container">
-			<table border="1">
-				<tr>
-					<td>id</td>
-					<td>nombre_usuario</td>
-					<td>contrasenia</td>
-				</tr>
-				<?php
-				$sql = "SELECT * from usuarios";
-				$result = mysqli_query ($conexion,$sql);
-				
-				while ($mostrar = mysqli_fetch_array($result)){
-				?>	
-				
-				<tr>
-					<td><?php echo $mostrar ['id']?></td>
-					<td><?php echo $mostrar ['nombre_usuario']?></td>
-					<td><?php echo $mostrar ['contrasenia']?></td>
-				</tr>
-				<?php
-				}
-				?>
-			</table>
-			
+		<!-- if estas logueado,nostrar -->
+		<div class="recos-container">
+
+			<article class="rec-card">
+				<div class="rec-img-container">
+					<a href="">
+						<img class="rec-img" src="https://contentv2.tap-commerce.com/cover/large/9789878317090_1.jpg?id_com=1113" alt="SOBRE HÉROES Y TUMBAS  V1 image">
+					</a>
+				</div>
+				<div class="rec-body">
+					<div class="rec-title">
+						<b title="SOBRE HÉROES Y TUMBAS  V1" class="rec-name">
+							SOBRE HÉROES Y TUMBAS  V1
+						</b>
+					</div>
+					<div class="rec-description">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio, perspiciatis.
+					</div>
+					<div class="rec-ver-mas">
+						<a href="">Ver más</a>
+					</div>
+				</div>
+			</article>
+			<article class="rec-card">
+				<div class="rec-img-container">
+					<a href="">
+						<img class="rec-img" src="https://contentv2.tap-commerce.com/cover/large/9789878317090_1.jpg?id_com=1113" alt="SOBRE HÉROES Y TUMBAS  V1 image">
+					</a>
+				</div>
+				<div class="rec-body">
+					<div class="rec-title">
+						<b title="SOBRE HÉROES Y TUMBAS  V1" class="rec-name">
+							SOBRE HÉROES Y TUMBAS  V1
+						</b>
+					</div>
+					<div class="rec-description">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio, perspiciatis.
+					</div>
+					<div class="rec-ver-mas">
+						<a href="">Ver más</a>
+					</div>
+				</div>
+			</article>
+			<article class="rec-card">
+				<div class="rec-img-container">
+					<a href="">
+						<img class="rec-img" src="https://contentv2.tap-commerce.com/cover/large/9789878317090_1.jpg?id_com=1113" alt="SOBRE HÉROES Y TUMBAS  V1 image">
+					</a>
+				</div>
+				<div class="rec-body">
+					<div class="rec-title">
+						<b title="SOBRE HÉROES Y TUMBAS  V1" class="rec-name">
+							SOBRE HÉROES Y TUMBAS  V1
+						</b>
+					</div>
+					<div class="rec-description">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio, perspiciatis.
+					</div>
+					<div class="rec-ver-mas">
+						<a href="">Ver más</a>
+					</div>
+				</div>
+			</article>
+		
+		</div>
 			<table border="1">
 				<tr>
 					<td>id</td>
@@ -63,11 +104,14 @@ $conexion = mysqli_connect ('localhost','root','','proyectoteruel')
 				}
 				?>
 			</table>
+			<!-- if no estas login,,,no mostrar -->
+				<!-- <p>no estas logueado amigue</p>
+				<a href="./vistas/login.php">logueate perro anashex</a> -->
 			</div>
 		<footer class="footer">
-				<a href="">Quienes Somos?</a>
+				<a href="./vistas/acerca.html">Quienes Somos?</a>
 				| 
-				<a href="">Terminos Y Condiciones</a>
+				<a href="./vistas/acerca.html">Terminos Y Condiciones</a>
 		</footer>
 	</div>
 </body>
