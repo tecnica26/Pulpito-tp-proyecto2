@@ -55,6 +55,7 @@ $conexion = mysqli_connect ('localhost','root','','proyectoteruel')
 					<div class="rec-description">
 						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio, perspiciatis.
 					</div>
+				
 					<div class="rec-ver-mas">
 						<a href="">Ver más</a>
 					</div>

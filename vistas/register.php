@@ -1,4 +1,4 @@
-
+<?php include('registrar.php') ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +27,7 @@
 					<input class="form-input" type="password" name="password" placeholder="Contraseña" required="true">
 				</div>
 				<div>
-					<input class="form-input form-input-submit" type="submit" value="Registrarme">
+					<input class="form-input form-input-submit" type="submit" name="reg_btn" value="Registrarme">
 				</div>
 			</form>
 			<small>Ya tienes una cuenta?
@@ -35,6 +35,8 @@
 			</small>
 		</div>
 	</div>
+	
+	
 
 	</body>
 </html>
