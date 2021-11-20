@@ -1,36 +1,49 @@
+<?php
+session_start();
+if(isset($_SESSION['usuarios'])){
+	header("Location: index.php");
+	
+}
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>PULPITO | LOGIN</title>
-	<link rel="stylesheet" href="../css/styles.css">
+    <title> login</title>
 </head>
 <body>
-	<a href="../index.php">Volver</a>
-	<br><br>
-	<hr>
+<form method= "POST" action ="";>
+	Usuario: <br>
+	<input type ="text" name="user"><br>
+	Contrasenia:<br>
+	<input type ="password" name="pass"><br>
+    <input type ="submit" name = "login" value ="login">
+	
+	
 
-<div class="content-container">    
-	<div class="login-container">
-		<h2 class="section-title">Login</h2>
-		<form action="/" method="POST">
-			<div>
-				<input autofocus="true" class="form-input" type="text" name="username" placeholder="Username" required="true">
-			</div>
-			<div>
-				<input class="form-input" type="password" name="password" placeholder="Contraseña" required="true">
-			</div>
-			<div>
-				<input class="form-input form-input-submit" type="submit" value="Ingresar">
-			</div>
-		</form>
-		<small>¿No tienes una cuenta?
-			<a class="mute" href="./register.php">Registrate</a>
-		</small>
-	</div>
-</div>
+
+</form>
+
+<?php
+
+if(isset ($_POST['login'])){
+	require("conexion.php");
+	
+	$user = $_POST['user'];
+	$pass = md5($_POST['pass']);
+	
+	$validar = $conexion->query("SELECT *FROM usuarios where nombre = '$user' AND contrasena ='$pass'");
+	$contar = $validar->num_rows;
+	//echo $contar;
+	if($contar == 1){
+		$_SESSION['usuarios'] = $user;
+		header("Location: index.php");
+	}
+	else{
+		echo "el usuario no existe o escribio mal algo, intente de nuevo";
+	}
+		
+}
+?>
 
 
 </body>

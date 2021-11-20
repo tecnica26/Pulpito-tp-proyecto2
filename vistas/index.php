@@ -10,8 +10,8 @@ session_start();
 
 
 <?php
-if(isset($_SESSION['usuario'])){
-echo "Bienvenido  ". $_SESSION ['usuario']."<br><br>" ;
+if(isset($_SESSION['usuarios'])){
+echo "Bienvenido  ". $_SESSION ['usuarios']."<br><br>" ;
 echo "<a href = 'logout.php' >Salir</a>";
 }
 

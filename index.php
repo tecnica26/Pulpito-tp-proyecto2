@@ -1,6 +1,6 @@
 <?php
 
-$conexion = mysqli_connect ('localhost','root','','proyectoteruel')
+$conexion = mysqli_connect ('localhost','root','','pulpito')
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -86,8 +86,9 @@ $conexion = mysqli_connect ('localhost','root','','proyectoteruel')
 			<table border="1">
 				<tr>
 					<td>id</td>
-					<td>descripcion</td>
-					<td>linkvermas</td>
+					<td>link</td>
+					<td>titulo<</td>
+					<td>descripcion_ver_mas</td>
 				</tr>
 				<?php
 				$sql = "SELECT * from obras";
@@ -98,8 +99,9 @@ $conexion = mysqli_connect ('localhost','root','','proyectoteruel')
 				
 				<tr>
 					<td><?php echo $mostrar ['id']?></td>
-					<td><?php echo $mostrar ['descripcion']?></td>
-					<td><?php echo $mostrar ['linkvermas']?></td>
+					td><?php echo $mostrar ['link']?></td>
+					<td><?php echo $mostrar ['titulo']?></td>
+					<td><?php echo $mostrar ['descripcion_ver_mas']?></td>
 				</tr>
 				<?php
 				}
