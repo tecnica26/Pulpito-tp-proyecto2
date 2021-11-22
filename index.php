@@ -113,20 +113,32 @@ else{
 					<td>linkvermas</td>
 				</tr>
 				<?php
-				$sql = "SELECT * from obras";
-				$result = mysqli_query ($conexion,$sql);
-				
-				while ($mostrar = mysqli_fetch_array($result)){
-				?>	
-				
-				<tr>
-					<td><?php echo $mostrar ['id']?></td>
-					<td><?php echo $mostrar ['descripcion']?></td>
-					<td><?php echo $mostrar ['nombre']?></td>
-				</tr>
-				<?php
-				}
-				?>
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "pulpito";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT id, nombre FROM obras";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<br> id: ". $row["id"]. " - Name: ". $row["nombre"]. " <br>";
+    }
+} else {
+    echo "0 results";
+}
+
+$conn->close();
+?>
 			</table>
 			<!-- if no estas login,,,no mostrar -->
 				<!-- <p>no estas logueado amigue</p>
