@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-11-2021 a las 17:37:43
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 8.0.12
+-- Tiempo de generación: 22-11-2021 a las 19:21:49
+-- Versión del servidor: 10.4.11-MariaDB
+-- Versión de PHP: 7.2.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -45,7 +46,10 @@ INSERT INTO `obras` (`id`, `nombre`, `img_link`, `descripcion`, `link`) VALUES
 (3, 'Koe no katachi', 'https://cl.buscafs.com/www.tomatazos.com/public/uploads/images/142036/142036_800x1200.jpg', 'Es una película sobre un estudiante de primaria sorda, en donde le hacen bullying sus nuevo compañeros de escuela', 'https://es.wikipedia.org/wiki/Koe_no_Katachi_(pel%C3%ADcula)'),
 (4, 'Train to busan', 'https://i.blogs.es/37d099/train-to-busan-poster/1366_2000.jpg', 'Un virus se expande por Corea del Sur, zombificando a los infectados, los pasajeros de un tren intentarán sobrevivir hasta llegar a Busan', 'Link: https://www.youtube.com/watch?v=B24RcWTh6zo'),
 (5, 'Is this it', 'https://upload.wikimedia.org/wikipedia/en/0/09/The_Strokes_-_Is_This_It_cover.png', 'Disco debut de The Strokes, banda yankee de rock. Lanzado el 30 de julio de 2001. ', 'https://www.youtube.com/watch?v=BXkm6h6uq0k'),
-(6, 'EL GOL DE MARADONA A LOS INGLESES ANIME | Gol del siglo', 'https://i.ytimg.com/vi/lrP8JYdCxkE/maxresdefault.jpg', 'Nunca es mal momento para recordar el gol de Maradona a Inglaterra y más si es animado. Fue un 22/07/86 en México.', 'https://www.youtube.com/watch?v=lrP8JYdCxkE');
+(6, 'EL GOL DE MARADONA A LOS INGLESES ANIME | Gol del siglo', 'https://i.ytimg.com/vi/lrP8JYdCxkE/maxresdefault.jpg', 'Nunca es mal momento para recordar el gol de Maradona a Inglaterra y más si es animado. Fue un 22/07/86 en México.', 'https://www.youtube.com/watch?v=lrP8JYdCxkE'),
+(7, 'Sex education', 'https://www.amica.it/wp-content/uploads/2021/09/1-1.jpg?v=1113145', 'Serie sobre adolescentes con problemas y relaciones cambiantes que determinaran el futuro de los protagonistas y de sus sentimientos. Escenas sexuales, no faltaran, pero casi siempre con un toque de humor. Esta serie ya cuenta con 3 temporadas, mira el trailer de la ultima!', 'https://www.youtube.com/watch?v=IGqEi5FjpCI'),
+(8, 'Red dead redemption 2', 'https://cdn1.epicgames.com/epic/offer/RDR2PC1227_Epic%20Games_860x1148-860x1148-b4c2210ee0c3c3b843a8de399bfe7f5c.jpg', 'El juego está ambientado en el Salvaje Oeste de América, en el año 1899. Trata sobre un forajido, que se vera envuelto en caos, debido a los conflictos que tiene su banda con el gobierno, ya que su tiempo se estaba acabando, el mundo estaba cambiando y por eso, los salvajes tenian que desaparecer.', 'https://www.youtube.com/watch?v=IjZwoOwxqtM'),
+(9, 'Spider-man: Un nuevo universo', 'https://es.web.img2.acsta.net/pictures/18/10/03/19/36/5818625.jpg', 'En un universo donde Peter Parker ha muerto, un joven llamado Miles Morales es el nuevo Spider-Man. Luego, llegara otro Peter Parker de otra diemension que tratará de enseñarle a Miles como ser un mejor Spider-Man. Pero no será el único Spider Man en entrar a este universo, 4 versiones mas aparecerán y buscarán regresar a su universo antes de que toda la realidad colapse.', 'https://www.youtube.com/watch?v=-RSseKOWpEQ');
 
 -- --------------------------------------------------------
 
@@ -96,7 +100,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `obras`
 --
 ALTER TABLE `obras`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
