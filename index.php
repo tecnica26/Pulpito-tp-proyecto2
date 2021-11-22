@@ -63,6 +63,7 @@ else{
 							</div>
 							<div class='rec-body'>
 								<div class='rec-title'>
+									<b>
 									" . $row["nombre"]. "
 									</b>
 								</div>

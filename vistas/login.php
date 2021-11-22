@@ -48,6 +48,10 @@ if(isset ($_POST['login'])){
 		$_SESSION['usuario'] = $user;
 		header("Location: ../index.php");
 	}
+	if($contar == 1){
+		$_SESSION['usuario'] = 'admin';
+		header("Location: admin/admin.php");
+	}
 	else{
 		echo "el usuario no existe o escribio mal algo, intente de nuevo";
 	}
