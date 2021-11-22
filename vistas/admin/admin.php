@@ -47,5 +47,41 @@
     </p>
     <input type="submit" value="Eliminar">
     </form>
+	
+	
+	
+	    <h3>Actualizar</h3>
+    <form action="update.php" method="post">
+    <p>
+        <label for="nombreactualizar">nombre de la recomendacion</label>
+        <input type="text" name="nombreactualizar" id="nombreactualizar">
+    </p>
+
+    <p>
+        <label for="nombre">nuevo nombre</label>
+        <input type="text" name="nombreupdate" id="nombreupdate">
+    </p>
+    <p>
+        <label for="descripcion">nuevo descripcion:</label>
+        <input type="text" name="descripcionupdate" id="descripcionupdate">
+    </p>
+    <p>
+        <label for="img_link">nuevo img_link:</label>
+        <input type="text" name="img_linkupdate" id="img_linkupdate">
+    </p>
+	<p>
+		<label for="link">nuevo link:</label>
+        <input type="text" name="linkupdate" id="linkupdate">
+	</p>
+    <input type="submit" value="Actualizar">
+    </form>
+
+    </form>
+	
+	
+	
+	
+	
+	
 </body>
 </html>
