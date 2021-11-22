@@ -45,12 +45,13 @@ if(isset ($_POST['login'])){
 	$contar = $validar->num_rows;
 	//echo $contar;
 	if($contar == 1){
-		$_SESSION['usuario'] = $user;
-		header("Location: ../index.php");
-	}
-	else if($contar == 1){
-		$_SESSION['usuario'] = 'admin';
-		header("Location: admin/admin.php");
+		if($contar == 1 && $user==='admin'){
+			$_SESSION['usuario'] = 'admin';
+			header("Location: ./admin/admin.php");
+		}else{
+			$_SESSION['usuario'] = $user;
+			header("Location: ../index.php");
+		}
 	}
 	else{
 		echo "el usuario no existe o escribio mal algo, intente de nuevo";

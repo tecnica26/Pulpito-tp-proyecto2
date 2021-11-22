@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-11-2021 a las 19:21:49
--- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.2.28
+-- Tiempo de generación: 22-11-2021 a las 20:00:34
+-- Versión del servidor: 10.4.21-MariaDB
+-- Versión de PHP: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -74,7 +73,8 @@ INSERT INTO `usuarios` (`id`, `nombre_usuario`, `contrasenia`) VALUES
 (19, 'kappa', 'fe1480ff8b6ed22e7723cda0145ef23d'),
 (20, 'goku', 'bef27466a245ce3ec692bd25409c2549'),
 (21, 'brandon', 'fc275ac3498d6ab0f0b4389f8e94422c'),
-(22, 'gary', '03b083fd0aadc8883198881ba88111ab');
+(22, 'gary', '03b083fd0aadc8883198881ba88111ab'),
+(23, 'admin', '7f4c1f4c2132086f9925dd679f048e72');
 
 --
 -- Índices para tablas volcadas
@@ -106,7 +106,7 @@ ALTER TABLE `obras`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
