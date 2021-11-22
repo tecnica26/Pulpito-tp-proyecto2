@@ -34,49 +34,46 @@ else{
 			</div>
 </header>
 <div class="content-container">
+	<div class='recos-container'>
 <?php
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "pulpito";
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "pulpito";
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+	die("Connection failed: " . $conn->connect_error);
+	}
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
-$sql = "SELECT id, nombre, img_link,descripcion,link FROM obras";
-$result = $conn->query($sql);
+	$sql = "SELECT id, nombre, img_link,descripcion,link FROM obras";
+	$result = $conn->query($sql);
 
 		if(isset($_SESSION['usuario'])){
 			if ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()) {
 					echo "	
-						<div class='recos-container'>
-							<article class='rec-card'>
-								<div class='rec-img-container'>
-									<a href=''>
-										<img class='rec-img' src='" . $row["img_link"]. "'>
-									</a>
+						<article class='rec-card'>
+							<div class='rec-img-container'>
+								<a target='_blank' href='" . $row["link"]. "'>
+									<img class='rec-img' src='" . $row["img_link"]. "'>
+								</a>
+							</div>
+							<div class='rec-body'>
+								<div class='rec-title'>
+									" . $row["nombre"]. "
+									</b>
 								</div>
-								<div class='rec-body'>
-									<div class='rec-title'>
-										<b title='SOBRE HÉROES Y TUMBAS  V1' class='rec-name'>
-										" . $row["nombre"]. "
-										</b>
-									</div>
-									<div class='rec-description'>
-									" . $row["descripcion"]. "
-									</div>
-									<div class='rec-ver-mas'>
-										<a href='" . $row["link"]. "'>Ver más</a>
-									</div>
+								<div class='rec-description'>
+								" . $row["descripcion"]. "
 								</div>
-							</article>			
-						</div>			
+								<div class='rec-ver-mas'>
+									<a target='_blank' href='" . $row["link"]. "'>Ver más</a>
+								</div>
+							</div>
+						</article>			
 					";
 				}
 			} else {
@@ -88,6 +85,8 @@ $result = $conn->query($sql);
 			echo "No estas logueade amigue";
 		}
 		?>
+		</div>
+		</div>
 		<footer class="footer">
 				<a href="./vistas/acerca.html">Quienes Somos?</a>
 				| 

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-11-2021 a las 13:29:59
--- Versión del servidor: 10.4.19-MariaDB
--- Versión de PHP: 8.0.7
+-- Tiempo de generación: 22-11-2021 a las 17:37:43
+-- Versión del servidor: 10.4.21-MariaDB
+-- Versión de PHP: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `obras` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(30) NOT NULL,
+  `nombre` text NOT NULL,
   `img_link` text NOT NULL,
   `descripcion` text NOT NULL,
   `link` text NOT NULL
@@ -43,7 +43,9 @@ INSERT INTO `obras` (`id`, `nombre`, `img_link`, `descripcion`, `link`) VALUES
 (1, 'Happy Together', 'https://variety.com/wp-content/uploads/2017/10/rexfeatures_5867685c.jpg', 'Película sobre una pareja gay que llega a Argentina desde Hong Kong buscando una mejor vida. Dirigida por Wong Kar-wai.', 'https://www.youtube.com/watch?v=5VPvFaAWX9U'),
 (2, 'Naruto cumpliendo su sueño', 'https://pm1.narvii.com/6996/6da8df2f295459581959007c08d806969919ef06r1-1250-1808v2_hq.jpg', 'En la imagen podemos apreciar a un papucho cumpliendo su sueño que tuvo desde muy pequeño', 'Link: https://www.youtube.com/watch?v=lyLofKyC6kw\r\n'),
 (3, 'Koe no katachi', 'https://cl.buscafs.com/www.tomatazos.com/public/uploads/images/142036/142036_800x1200.jpg', 'Es una película sobre un estudiante de primaria sorda, en donde le hacen bullying sus nuevo compañeros de escuela', 'https://es.wikipedia.org/wiki/Koe_no_Katachi_(pel%C3%ADcula)'),
-(4, 'Train to busan', 'https://i.blogs.es/37d099/train-to-busan-poster/1366_2000.jpg', 'Un virus se expande por Corea del Sur, zombificando a los infectados, los pasajeros de un tren intentarán sobrevivir hasta llegar a Busan', 'Link: https://www.youtube.com/watch?v=B24RcWTh6zo');
+(4, 'Train to busan', 'https://i.blogs.es/37d099/train-to-busan-poster/1366_2000.jpg', 'Un virus se expande por Corea del Sur, zombificando a los infectados, los pasajeros de un tren intentarán sobrevivir hasta llegar a Busan', 'Link: https://www.youtube.com/watch?v=B24RcWTh6zo'),
+(5, 'Is this it', 'https://upload.wikimedia.org/wikipedia/en/0/09/The_Strokes_-_Is_This_It_cover.png', 'Disco debut de The Strokes, banda yankee de rock. Lanzado el 30 de julio de 2001. ', 'https://www.youtube.com/watch?v=BXkm6h6uq0k'),
+(6, 'EL GOL DE MARADONA A LOS INGLESES ANIME | Gol del siglo', 'https://i.ytimg.com/vi/lrP8JYdCxkE/maxresdefault.jpg', 'Nunca es mal momento para recordar el gol de Maradona a Inglaterra y más si es animado. Fue un 22/07/86 en México.', 'https://www.youtube.com/watch?v=lrP8JYdCxkE');
 
 -- --------------------------------------------------------
 
@@ -94,7 +96,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `obras`
 --
 ALTER TABLE `obras`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
