@@ -27,7 +27,7 @@ session_start();
 			<?php
 if(isset($_SESSION['usuario'])){
 echo "Bienvenido  ". $_SESSION ['usuario']."<br><br>" ;
-echo "<a href = 'logout.php' >Salir</a>";
+echo "<a href = 'vistas/logout.php' >Salir</a>";
 }
 
 else{

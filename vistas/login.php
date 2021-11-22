@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(isset($_SESSION['usuario'])){
+	header("Location: ../index.php");
+	
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,17 +22,38 @@
 <div class="content-container">    
 	<div class="login-container">
 		<h2 class="section-title">Login</h2>
-		<form action="/" method="POST">
+		<form action="" method="POST">
 			<div>
-				<input autofocus="true" class="form-input" type="text" name="username" placeholder="Username" required="true">
+				<input autofocus="true" class="form-input" type="text" name="user" placeholder="Username" required="true">
 			</div>
 			<div>
-				<input class="form-input" type="password" name="password" placeholder="Contraseña" required="true">
+				<input class="form-input" type="password" name="pass" placeholder="Contraseña" required="true">
 			</div>
 			<div>
-				<input class="form-input form-input-submit" type="submit" value="Ingresar">
+				<input class="form-input form-input-submit" type="submit" name="login" value="Ingresar">
 			</div>
 		</form>
+		<?php
+
+if(isset ($_POST['login'])){
+	require("conexion.php");
+	
+	$user = $_POST['user'];
+	$pass = md5($_POST['pass']);
+	
+	$validar = $conexion->query("SELECT * FROM usuarios where nombre_usuario = '$user' AND contrasenia ='$pass'");
+	$contar = $validar->num_rows;
+	//echo $contar;
+	if($contar == 1){
+		$_SESSION['usuario'] = $user;
+		header("Location: ../index.php");
+	}
+	else{
+		echo "el usuario no existe o escribio mal algo, intente de nuevo";
+	}
+		
+}
+?>
 		<small>¿No tienes una cuenta?
 			<a class="mute" href="./register.php">Registrate</a>
 		</small>
