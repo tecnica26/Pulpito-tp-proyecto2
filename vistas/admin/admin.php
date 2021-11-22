@@ -43,7 +43,7 @@
     <form action="delete.php" method="post">
     <p>
         <label for="nombredelete">nombre:</label>
-        <input type="text" name="nombredelete" id="nombre">
+        <input type="text" name="nombredelete" id="nombredelete">
     </p>
     <input type="submit" value="Eliminar">
     </form>
