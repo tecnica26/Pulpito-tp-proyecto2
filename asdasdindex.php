@@ -1,6 +1,6 @@
 <?php
 
-$conexion = mysqli_connect ('localhost','root','','proyectoteruel')
+$conexion = mysqli_connect ('localhost','root','','pulpito')
 ?>
 <!DOCTYPE html>
 <html lang="en">
