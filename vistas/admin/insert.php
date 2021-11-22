@@ -12,9 +12,9 @@
     $nombre = $mysqli->real_escape_string($_REQUEST['nombre']);
     $descripcion = $mysqli->real_escape_string($_REQUEST['descripcion']);
     $img_link = $mysqli->real_escape_string($_REQUEST['img_link']);
-    
+    $link = $mysqli->real_escape_string($_REQUEST['link']);
     // Attempt insert query execution
-    $sql = "INSERT INTO obras (nombre, img_link,descripcion, img_link) VALUES ('$nombre','$img_link', '$descripcion', '$img_link')";
+    $sql = "INSERT INTO obras (nombre, img_link,descripcion, link) VALUES ('$nombre','$img_link', '$descripcion', '$link')";
     if($mysqli->query($sql) === true){
         echo "Records inserted successfully.";
     } else{

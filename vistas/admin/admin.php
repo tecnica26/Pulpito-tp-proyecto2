@@ -28,6 +28,10 @@
         <label for="img_link">img_link:</label>
         <input type="text" name="img_link" id="img_link">
     </p>
+	<p>
+		<label for="link">link:</label>
+        <input type="text" name="link" id="link">
+	</p>
     <input type="submit" value="Agregar">
     </form>
 
