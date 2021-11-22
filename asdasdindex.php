@@ -1,6 +1,5 @@
 <?php
-
-$conexion = mysqli_connect ('localhost','root','','pulpito')
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +12,33 @@ $conexion = mysqli_connect ('localhost','root','','pulpito')
 </head>
 <body>
 	<div class="container">
-		<?php
-		include('./vistas/componentes/header.php')
-		?>
+
+
+
+
+
+<header class="header">
+			<h1>
+                <a href="index.php">PULPITO</a>    
+            </h1>
+			<div class="sign-buttons">
+
+			
+			<?php
+if(isset($_SESSION['usuario'])){
+echo "Bienvenido  ". $_SESSION ['usuario']."<br><br>" ;
+echo "<a href = 'logout.php' >Salir</a>";
+}
+
+else{
+	
+	echo "<a href='./vistas/login.php'>Ingresar</a> <a href='./vistas/register.php'>Registrarme</a> ";
+}
+?>
+			</div>
+</header>
+
+		
 		<div class="content-container">
 		<!-- if estas logueado,nostrar -->
 		<div class="recos-container">
@@ -99,7 +122,7 @@ $conexion = mysqli_connect ('localhost','root','','pulpito')
 				<tr>
 					<td><?php echo $mostrar ['id']?></td>
 					<td><?php echo $mostrar ['descripcion']?></td>
-					<td><?php echo $mostrar ['linkvermas']?></td>
+					<td><?php echo $mostrar ['nombre']?></td>
 				</tr>
 				<?php
 				}

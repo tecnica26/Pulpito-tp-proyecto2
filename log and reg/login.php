@@ -31,7 +31,7 @@ if(isset ($_POST['login'])){
 	$user = $_POST['user'];
 	$pass = md5($_POST['pass']);
 	
-	$validar = $conexion->query("SELECT *FROM usuarios where nombre_usuario = '$user' AND contrasenia ='$pass'");
+	$validar = $conexion->query("SELECT * FROM usuarios where nombre_usuario = '$user' AND contrasenia ='$pass'");
 	$contar = $validar->num_rows;
 	//echo $contar;
 	if($contar == 1){
