@@ -15,8 +15,10 @@
     $link = $mysqli->real_escape_string($_REQUEST['link']);
     // Attempt insert query execution
     $sql = "INSERT INTO obras (nombre, img_link,descripcion, link) VALUES ('$nombre','$img_link', '$descripcion', '$link')";
+    
     if($mysqli->query($sql) === true){
-        echo "Records inserted successfully.";
+        echo "Se inserto correctamente <a href='../../index.php'>VOLVER HOME<a>";
+        
     } else{
         echo "ERROR: Could not able to execute $sql. " . $mysqli->error;
     }

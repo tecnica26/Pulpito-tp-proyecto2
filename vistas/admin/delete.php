@@ -14,7 +14,8 @@
     // Attempt insert query execution
     $sql = "DELETE FROM obras WHERE nombre = '$nombre'";
     if($mysqli->query($sql) === true){
-        echo "Se elimino correctamente";
+        echo "Se elimino correctamente <a href='../../index.php'>VOLVER HOME<a>";
+
     } else{
         echo "ERROR: Could not able to execute $sql. " . $mysqli->error;
     }

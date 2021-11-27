@@ -21,7 +21,8 @@
     // Attempt insert query execution
     $sql = "UPDATE obras SET nombre = '$nombreupdate', img_link = '$img_linkupdate', descripcion = '$descripcionupdate', link = '$linkupdate' WHERE nombre = '$nombreactualizar'";
     if($mysqli->query($sql) === true){
-        echo "Se actualizo correctamente";
+        echo "Se actualizo correctamente <a href='../../index.php'>VOLVER HOME<a>";
+        
     } else{
         echo "ERROR: Could not able to execute $sql. " . $mysqli->error;
     }
